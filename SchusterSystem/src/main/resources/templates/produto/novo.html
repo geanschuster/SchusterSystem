@@ -1,0 +1,63 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SchusterSystem</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>    
+<body>
+
+<div th:replace="~{/fragmentos :: menu}"></div>
+
+<form  id="formulario" th:object="${produto}"  action="/produto/salvar" method="POST" class=" d-block bg-light">
+		<h3 class="text-success" >Cadastrar Produto</h3>
+		
+		
+
+		<div class="col-md-6">
+			<label for="inputNome" class="form-label">Nome:</label> 
+			<input type="text" required name="nome" class="form-control" th:field="*{nome}" id="inputNome">
+		</div>
+		<div class="col-md-6">
+			<label for="inputQuantidade" class="form-label">Quantidade:</label> 
+			<input type="text" required name="quantidade" class="form-control" th:field="*{quantidade}" id="inputQuantidade">
+		</div>
+		<div class="col-md-6">
+			<label for="inputValor" class="form-label">Valor:</label> 
+			<input type="text" required name="valor" class="form-control" th:field="*{valor}" id="inputValor">
+		</div>
+		
+		
+
+			 	
+		<div class="col-md-4 mt-5">
+			<div class=" d-flex">
+				<button  type="submit" class="botao btn-lg btn-success m-1 ">Salvar</button>
+				<button type="reset" disabled class="botao btn btn-lg btn-danger m-1">Excluir</button>
+				<a type="button" href="/produto/lista" class="botao btn btn-lg btn-light border  m-1">Voltar</a>
+			</div>
+		</div>
+	</form>
+
+</body>
+<style type="text/css">
+
+
+
+#formulario {
+	width: 40%;
+	margin: 5% 0 0 20%;
+	background-color: white;
+	border-radius: 0.5rem;
+	padding: 1rem;
+	height: 25rem;
+	padding-bottom: 2rem;
+}
+
+
+
+</style>
+
+</html>

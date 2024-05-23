@@ -1,0 +1,44 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SchusterSystem</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+<div th:replace="~{/fragmentos :: menu}"></div>
+
+<div class="card text-center w-75 ">
+  <div class="card-header">
+    Seja Bem vindo!
+  </div>
+  <div class="card-body ">
+    <h5 class="card-title">SchusterSystem</h5>
+    <p class="card-text">Faça o cadastro de seus produtos clicando no botão abaixo!</p>
+    <a href="/produto/lista" class="btn btn-primary">Vamos lá!</a>
+  </div>
+  <div class="card-footer text-muted">
+    
+  </div>
+</div>
+
+</body>
+
+
+<style type="text/css">
+
+
+
+.card {
+	margin-left: 12%;
+}
+
+
+
+</style>
+
+
+</html>
