@@ -8,6 +8,9 @@ public class SchusterSystemApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SchusterSystemApplication.class, args);
+		
+		
+		
 	}
 
 }
